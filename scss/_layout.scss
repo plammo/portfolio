@@ -12,6 +12,57 @@
     box-sizing: border-box;
 }
 
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+/*h1, h2 {
+
+	padding:0;
+	margin:0;
+
+}*/
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+	//margin-bottom: 4px;
+	//padding-top: 20px;
+	font-family: 'Lato', sans-serif;
+	color:#666;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color:#323130;
+  top:0;
+  left:0;
+}
+
+.logo img {
+	width:100px;
+	margin:20px 0 0 20px;
+	opacity: .95;
+	z-index: 1000;
+}
+
+
+//navigation styling and effects follow
+
+nav{
+	height: 75px;
+   
+}
+
+nav li{
+    display: inline-block;
+    text-decoration: none;
+    margin-top:30px;
+    margin-left:3%;
+}
+
 nav a {
 	position: relative;
 	display: inline-block;
@@ -31,75 +82,116 @@ nav a:focus {
 	outline: none;
 }
 
+//this is the css effects on the nav links
 
-/*.cl-effect-18 {
-	position: relative;
-	z-index: 1;
-}
+.link_type_0 a {
+	padding: 10px 0;
+	color: #999;
+	text-shadow: none;
+} 
 
-.cl-effect-18 a {
-	padding: 0 5px;
-	color: #b4770d;
-	font-weight: 700;
-	-webkit-transition: color 0.3s;
-	-moz-transition: color 0.3s;
-	transition: color 0.3s;
-}
-
-.cl-effect-18 a::before,
-.cl-effect-18 a::after {
+.link_type_0 a::before {
 	position: absolute;
-	width: 100%;
+	top: 0;
 	left: 0;
-	top: 50%;
-	height: 2px;
-	margin-top: -1px;
-	background: #b4770d;
-	content: '';
-	z-index: -1;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	pointer-events: none;
-}
-
-.cl-effect-18 a::before {
-	-webkit-transform: translateY(-20px);
-	-moz-transform: translateY(-20px);
-	transform: translateY(-20px);
-}
-
-.cl-effect-18 a::after {
-	-webkit-transform: translateY(20px);
-	-moz-transform: translateY(20px);
-	transform: translateY(20px);
-}
-
-.cl-effect-18 a:hover,
-.cl-effect-18 a:focus {
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #fff;
 	color: #fff;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
 }
 
-.cl-effect-18 a:hover::before,
-.cl-effect-18 a:hover::after,
-.cl-effect-18 a:focus::before,
-.cl-effect-18 a:focus::after {
-	opacity: 0.7;
+.link_type_0 a:hover::before,
+.link_type_0 a:focus::before {
+	max-width: 100%;
 }
 
-.cl-effect-18 a:hover::before,
-.cl-effect-18 a:focus::before {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
+//end of navigation
+
+//start of main body section
+
+//start of homepage styling
+
+.homepage {
+
+    background: url("../images/over3_web.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:1000px;
 }
 
-.cl-effect-18 a:hover::after,
-.cl-effect-18 a:focus::after {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}*/
+.welcome {
+	margin-top: 25%;
+	z-index: 10;
+}
+
+.welcome h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 5em;
+    font-weight: bold;
+    color:#ecf0f1;
+    width:50%;
+    word-spacing: 15px;
+    letter-spacing: 10px;
+}
+
+.welcome h2 {
+	margin-top:25px;
+	font-size: 35px;
+	color:#ecf0f1;
+	font-family: 'Amatic SC', cursive;
+	//letter-spacing: 1px;
+}
+
+
+//start of about me section
+
+.about {
+
+	background-size: cover;
+	background-color: #F4F1ED;
+    min-height:1250px;
+}
+
+.intro {
+	
+	margin-top:50px;
+}
+
+.intro h1,
+.work h1 {
+font-family: 'Amatic SC', cursive;
+font-size: 5em;
+font-weight: bold;
+color:black;
+word-spacing: 15px;
+letter-spacing: 10px;
+text-align: center;
+padding:75px 0 10px 0;
+}
+
+.tense_boxes {
+	
+	margin-top: 100px;
+}
+
+.tense_boxes h3 {
+	
+	font-size:20px;
+}
+
+.box {
+	
+	text-align:center;
+}
+
+//this is the styling for css effects revolving headers on work page
 
 .link_type_1 a {
 	line-height: 40px;
@@ -115,9 +207,9 @@ nav a:focus {
 	padding: 0 14px;
 	background: #ADBAAC;
 	width:200px;
-	-webkit-transition: -webkit-transform 0.3s;
-	-moz-transition: -moz-transform 0.3s;
-	transition: transform 0.3s;
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	transition: transform 0.5s;
 	-webkit-transform-origin: 50% 0;
 	-moz-transform-origin: 50% 0;
 	transform-origin: 50% 0;
@@ -132,11 +224,11 @@ nav a:focus {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #0965a0;
+	background: #C52C41;
 	content: attr(data-hover);
-	-webkit-transition: background 0.3s;
-	-moz-transition: background 0.3s;
-	transition: background 0.3s;
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	transition: background 0.5s;
 	-webkit-transform: rotateX(-90deg);
 	-moz-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
@@ -159,133 +251,80 @@ nav a:focus {
 	padding:0px 10px;	
 }
 
-.cl-effect-11 a {
-	padding: 10px 0;
-	//border-top: 2px solid #fff;//0972b4;
-	color: #999;//0972b4;
-	text-shadow: none;
-} 
 
-.cl-effect-11 a::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	padding: 10px 0;
-	max-width: 0;
-	border-bottom: 2px solid #fff;
-	color: #fff;
-	content: attr(data-hover);
-	-webkit-transition: max-width 0.5s;
-	-moz-transition: max-width 0.5s;
-	transition: max-width 0.5s;
+.past,
+.present,
+.future,
+.past_pics,
+.present_pics,
+.future_pics {
+
+	margin-top:35px;
+	display:none;
 }
 
-.cl-effect-11 a:hover::before,
-.cl-effect-11 a:focus::before {
-	max-width: 100%;
+.mailme,
+.mailme_deats {
+	display:none;
 }
 
-
-
-
-
-/* to use lato font - font-family: 'Lato', sans-serif;*/
-
-body{
-	font-family: 'Muli', sans-serif;
+.mailme_deats {
+	margin-top:30px;
 }
 
+.biz_icons img {
 
-p {
-		font-size: 16px;
-		line-height: 24px;
-		margin-bottom: 4px;
-		padding-top: 20px;
-}
-
-
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  background-color:#323130;
-}	
-
-
-nav{
-	height: 75px;
-    //border:solid 1px white;
-}
-
-
-
-nav li{
-    display: inline-block;
-    text-decoration: none;
-    margin-top:30px;
-    //float:left;
-    //border:solid 1px white;
-    margin-left:3%;
+	//border:solid 1px #ff0000;
+	margin-left:2px;
+	box-shadow: 10px 10px 5px #888888;
 
 }
 
-/*nav li a{
-    text-decoration: none;
-    font-size: .9em;
-    padding:0 .75em;
-    font-family: Thonburi;
-    color:#999;
-    //border:solid 1px white;
+.present_pics h2, .techs h2, .past_pics h2, .future_pics h2, .mailme_deats h2  {
 
+	color:#C52C41;
 }
 
-nav li a:hover{
-    text-decoration: underline;
-    color:#00a3d3;
-}*/
-
-.logo img {
-	width:100px;
-	margin:20px 0 0 20px;
-	opacity: .95;
-	z-index: 1000;
+.present_pics h2, .past_pics h2, .future_pics h2 {
+	margin:0;
+	padding:0;
 }
 
-main {
-	padding-top: 50px; 
+.techs h2 {
+
+	font-size:20px;
+	line-height:18px;
 }
 
-.homepage {
+.techs h3, .mailme_deats h3 {
 
-	background: url("../images/over3_web.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:1000px;
+	color:#666;
 }
+
+.techs h2 span {
+
+	color:#666;
+}
+
+.techs h4 {
+
+	color: #666;
+	//font-size:20px;
+	font-weight:bold;
+}
+
+//static image of deb - fixed while page scrolls over it
 
 .debpic {
 
-	background: url("../images/debpic_web.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:1000px;
-  background-attachment: fixed;
-}
+    background: url("../images/debpic_web.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 1000px;
 
-.chaspic {
-
-	background: url("../images/fatchas_web.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height:1000px;
-  background-attachment: fixed;
 }
 
 h1 span {
@@ -294,44 +333,267 @@ h1 span {
 	font-style: italic;
 	text-decoration: underline;
 }
-.welcome {
-	//position:absolute;
-	margin-top: 25%;
-	//border:solid 1px white;
-	z-index: 10;
+
+//start of work section
+
+.work {
+
+    background-size: cover;
+    height:100%;
+    background-color: #D2DFDB;
+    position:relative;
+
+
+&:before {
+
+    content:'';
+    background: url("../images/backg.gif") no-repeat;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:.075;
+
+
 }
 
-.welcome h1 {
-font-family: 'Amatic SC', cursive;
-//font-family: 'Rock Salt', cursive;
-font-size: 5em;
-font-weight: bold;
-color:#ecf0f1;
-width:50%;
-word-spacing: 15px;
-letter-spacing: 10px;
-//border:solid 1px white;
 }
 
-.welcome h2 {
-	margin-top:25px;
-	font-size: 35px;
+.website_tiles {
+
+    margin-bottom:300px;
+}
+
+.grace h2,
+.clark h2,
+.jennifer h2,
+.bond h2 {
+
+text-align:center;
+margin-top:150px;
+font-size:22px;
+
+}
+
+.leo h2 {
+
+text-align:center;
+margin-top:150px;
+font-size:22px;
+
+}
+
+
+.work__topic--left h3,
+.work__topic--middle h3,
+.work__topic--right h3{
+	width:50%;
+	background-color:#555;
+	padding:10px 0 10px 5px;
 	color:#ecf0f1;
+	font-size: 16px;
+}
+
+.work__topic--left p,
+.work__topic--middle p,
+.work__topic--right p{
+	margin-top:10px;
+	background-color: white;//888;
+	height:200px;
+	padding-left:8px;
+	font-size: 16px;
+	border:solid 5px #888;
+}
+
+.web_row2 {
+	padding-top:25px;
+	margin-bottom: 100px;
+}
+
+
+//static image of chas - fixed while page scrolls over it
+
+.chaspic {
+
+	background: url("../images/chas2.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height:1250px;
+}
+
+.chas_message h1 {
+	
+	margin-top:250px;
+	text-align:center;
 	font-family: 'Amatic SC', cursive;
-	//letter-spacing: 1px;
+	font-size:72px;
+	color:#ecf0f1;//440000;
+	letter-spacing:2px;
+
 }
 
-.about {
+.row_family {
+    
+    margin-top:100px;
 
-	background-size: cover;
-	height:1000px;
-	background-color: #F4F1ED;
 }
+
+.family {
+
+	background-color:#efedda;
+	min-height:1200px;
+	opacity:.8;
+}
+
+.fitness {
+    
+    background-color:#ADBAAC;
+    min-height:1200px;
+}
+
+
+//the following is for the contact section
+
+.contact_left,
+.contact_right {
+  
+  margin-top:100px;   
+}
+
+.contact_left h3,
+.contact_right h3 {
+    width:50%;
+    background-color:#555;
+    padding:10px 0 10px 5px;
+    color:#ecf0f1;
+    font-size: 16px;
+}
+
+.contact_left p,
+.contact_right p {
+    margin-top:10px;
+    background-color: white;//888;
+    height:200px;
+    padding-left:8px;
+    font-size: 16px;
+    border:solid 5px #888;
+}
+
+.boxes {
+    
+    width:100px;
+    float:left;
+    //border:solid 1px black;
+    //margin-left:2px;
+    height:100px;
+    margin-bottom:25px;
+}
+
+#box1 {
+    
+    background-color: #cd489b;
+}
+
+#box2 {
+    
+    background-color: #65c8c5;
+}
+
+#box3 {
+    
+    background-color: #efedda;
+}
+
+#box4 {
+    
+    background-color: #8c7a7a;
+}
+
+#box5 {
+    
+    background-color: #a3d9d9;
+}
+//footer section
+
+footer{
+	padding-top: 100px;
+	background-color: #323130;
+	height:200px;
+}
+
+
+.footer__contact {
+	color:#888;
+	margin:0;
+	padding:0;
+	//opacity:.7;
+}
+
+.withlove {
+font-family: 'Lato', sans-serif;
+font-weight: normal;
+font-size: 16px;
+color: #ecf0f1;
+letter-spacing:1px;
+word-spacing:2px;
+margin-bottom:0;
+
+}
+
+.withlove img {
+
+    padding:0px 5px;
+    margin-bottom:5px;
+}
+
+.cloud {
+
+    //text-align:center;
+    font-size:14px;
+    margin:0;
+    padding:0;
+    word-spacing:2px;
+    letter-spacing:1px;
+    margin-left:8px;
+}
+
+
+.animated_heart {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -o-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
 
 //this code is for opacity based background image styling so the background 
 //fades but the foreground and content are unaffected
 
-/*.about {
+/*footer {
 
 position:relative;
   height:1000px;
@@ -342,7 +604,7 @@ position:relative;
 &:before {
 
 	content:'';
-	background: url("../images/heart.jpg") no-repeat center center;
+	background: url("../images/Cityscape-Background.jpg") no-repeat;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -353,203 +615,24 @@ position:relative;
   position:absolute;
   top:0;
   left:0;
-  opacity:.3;
+  opacity:.8;
 
 
 }
 
 }*/
 
-.intro h1,
-.work h1 {
-font-family: 'Amatic SC', cursive;
-font-size: 5em;
-font-weight: bold;
-color:black;
-word-spacing: 15px;
-letter-spacing: 10px;
-text-align: center;
-padding:75px 0 50px 0;
-}
-
-.intro h2 {
-	font-size: 16px;
-	line-height: 24px;
-	color:#666;
-	//font-family: 'Amatic SC', cursive;
-	font-family: 'Muli', sans-serif;
-}
-
-.row2 {
-	margin-top:120px;
-}
-
-.work {
-background-size: cover;
-  height:1200px;
-  background-color: #D2DFDB;
-
-}
-
-.about__topic--left h3,
-.about__topic--middle h3,
-.about__topic--right h3{
-width:50%;
-background-color:#3988A8;
-padding:10px 0 10px 5px;
-color:#ecf0f1;
-font-size: 16px;
-}
-
-.about__topic--left p,
-.about__topic--middle p,
-.about__topic--right p{
-margin-top:10px;
-background-color: white;//888;
-height:200px;
-padding-left:8px;
-font-size: 16px;
-border:solid 5px #888;
-}
-
-.web_row2 {
-	padding-top:25px;
-	margin-bottom: 100px;
-}
-
-.work__topic--left h3,
-.work__topic--middle h3,
-.work__topic--right h3{
-width:50%;
-background-color:#555;
-padding:10px 0 10px 5px;
-color:#ecf0f1;
-font-size: 16px;
-}
-
-.work__topic--left p,
-.work__topic--middle p,
-.work__topic--right p{
-margin-top:10px;
-background-color: white;//888;
-height:200px;
-padding-left:8px;
-font-size: 16px;
-border:solid 5px #888;
-}
 
 
-.row0 .col-1-1 .topic__0 {
 
-	height: 800px;
-	position:relative;
-	border:solid 1px white;
-}
-
-.row0 img {
-	position:relative;
-	height:800px;
-	width:100%;
-	z-index: 0;
-	opacity:.6;
-	//border:solid 1px red;
-	margin-top: -75px;
-}
-
-.block_page__first {
-	background-image: url("../images/over2.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+//other code below - needs to be checked aaginst other pages for what makes it
+//into final single page website
 
 
-.topic__1 h1,
-.row_ct__header h1,
-.row_contact__header--response h1{
-	line-height: 150%;
-	font-size: 8.5em;
-	text-align: center;
-}
-
-
-.image__paul {
-
-	border:solid 1px #333;
-	min-height:360px;
-}
-
-
-.topic__1,
-.topic__1__content--left,
-.topic__1__content--right,
-.topic__1__content--middle {
-	color:#555;
-	opacity:.8;
-
-	background-color:#ADBAAC;
-}
-
-.topic__1 {
-	height:800px;
-}
-
-
-.topic__1 h1,
-.topic__1__content--left h3,
-.topic__1__content--right h3,
-.topic__1__content--middle h3,
-.row_contact__header h1,
-.row_contact__header--response h1 {
-
-	font-family: 'Rock Salt', cursive;
-	color:#F6F6EF;
-}
-
-
-.topic__1 p{
-	font-size: 1.25em;
-	text-align: center;
-	line-height: 150%;
-	//word-spacing: .1em;
-	letter-spacing: .1em;
-}
-
-
-.topic__1__content--left h3,
-.topic__1__content--middle h3,
-.topic__1__content--right h3 {
-	//background-color: gray;
-	//opacity:.8;
-
-}
-
-/*.topic__1__content--left p,
-.topic__1__content--middle p,
-.topic__1__content--right p,
- {
-	color:#555;
-	font-family: "Geneva", Tahoma, sans-serif;
-	line-height: 150%;
-}*/
-
-.row_video{
+/*.row_video{
 	margin-top:50px;
 }
 
-footer{
-	padding-top: 100px;
-	//background-color: #323130;
-	//height: 100px;
-}
-
-.footer__contact {
-	color:#888;
-	margin:0;
-	padding:0;
-	//opacity:.7;
-}
 
 .row_contact__details .col-1-1 h2 {
 	text-align: center;
@@ -609,7 +692,5 @@ label{
     padding:4px 10px;
     border-radius: 5px;
     border: solid 2px #2ecc71;
-    margin-left:5px}
-
-
+    margin-left:5px}*/
 
